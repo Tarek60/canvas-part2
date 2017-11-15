@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 3</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400" style="border: 2px solid black"></canvas>
+    <script>
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+
+    //tete
+    ctx.beginPath();
+    ctx.arc(200,80,45,0,Math.PI*2,true);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //yeux
+    ctx.beginPath();
+    ctx.arc(187,70,7,0,Math.PI*2,true);//oeil gauche
+    ctx.arc(214,70,7,0,Math.PI*2,true);//oeil droit
+    ctx.fillStyle = "white";
+    ctx.fill();
+    //sourcil gauche
+    ctx.beginPath();
+    ctx.moveTo(180,55);
+    ctx.quadraticCurveTo(187,50,194,55);
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //sourcil droite
+    ctx.beginPath();
+    ctx.moveTo(207,55);
+    ctx.quadraticCurveTo(214,50,221,55);
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //bouche
+    ctx.beginPath();
+    ctx.moveTo(182,90);
+    ctx.quadraticCurveTo(200,100,219,90);
+    ctx.quadraticCurveTo(200,110,182,90);
+    ctx.strokeStyle = "red"
+    ctx.stroke();
+    //corps
+    ctx.beginPath();
+    ctx.fillStyle = "#976F0F";
+    ctx.fillRect(155,110,90,150);
+    //bras gauche
+    ctx.beginPath();
+    ctx.moveTo(155,110);
+    ctx.lineTo(75,110);
+    ctx.lineTo(75,140);
+    ctx.lineTo(155,140);
+    ctx.lineTo(155,110);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //main gauche
+    ctx.beginPath();
+    ctx.moveTo(75,110);
+    ctx.quadraticCurveTo(40,125,75,140);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //bras droit
+    ctx.beginPath();
+    ctx.fillStyle = "#976F0F";
+    ctx.fillRect(245,110,80,30);
+    //main droite
+    ctx.beginPath();
+    ctx.moveTo(325,110);
+    ctx.quadraticCurveTo(360,125,325,140);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //boutons violet
+    ctx.beginPath();
+    ctx.arc(200,155,8,0,Math.PI*2,true);
+    ctx.arc(200,185,8,0,Math.PI*2,true);
+    ctx.fillStyle = "#7A2976";
+    ctx.fill();
+    //jambes
+    ctx.beginPath();
+    ctx.fillStyle = "#976F0F";
+    ctx.fillRect(155,260,35,40);
+    ctx.fillRect(210,260,35,40)
+    //pieds gauche
+    ctx.beginPath();
+    ctx.moveTo(155,300);
+    ctx.quadraticCurveTo(172.5,320,190,300);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //pied droit
+    ctx.beginPath();
+    ctx.moveTo(210,300);
+    ctx.quadraticCurveTo(227.5,320,245,300);
+    ctx.fillStyle = "#976F0F";
+    ctx.fill();
+    //entre-jambe
+    ctx.beginPath();
+    ctx.moveTo(190,260)
+    ctx.quadraticCurveTo(200,240,210,260);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    </script>
+  </body>
+</html>
